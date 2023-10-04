@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATURALIDADE</title>
+</head>
+<body>
+    <h1>NATURALIDADE</h1>
+    Qual o seu pais de origem? <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar(){
+            var txtp = document.getElementById('txtpais')
+            var res = document.getElementById('res')
+            var pais = txtp.value
+            res.innerHTML = `<p>Seja bem Vindo!</p> `
+            if (pais === 'EUA'){
+                res.innerHTML += `<p>Olha só temos um <strong>GRINGO</strong> por aqui :)</p>`
+            } else if (pais === 'BRASIL'){
+                res.innerHTML += `<p>Opa <strong>BRASILEIRO</strong> já é da casa :D</p>`
+            } else {
+              res.innerHTML += `<p>É UM <strong>PRAZER</strong> receber todos aqui :D</p>`  
+            }
+        }
+    </script>
+</body>
+</html>
